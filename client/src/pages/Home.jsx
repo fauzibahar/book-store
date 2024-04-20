@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../components/Spinner";
 import { Link } from "react-router-dom";
-import { MdOutlineAddBox} from "react-icons/md";
+import { MdOutlineAddBox } from "react-icons/md";
 import BooksTable from "../components/home/BooksTable";
 import BooksCard from "../components/home/BooksCard";
 
@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://book-store-phi-two.vercel.app/api/books")
+      .get("https://book-store-api-theta.vercel.app/api/books")
       .then((res) => {
         setBooks(res.data.data);
         setLoading(false);

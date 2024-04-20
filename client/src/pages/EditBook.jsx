@@ -17,7 +17,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://book-store-phi-two.vercel.app/api/books/${id}`)
+      .get(`https://book-store-api-theta.vercel.app/api/books/${id}`)
       .then((res) => {
         setAuthor(res.data.author);
         setPublishYear(res.data.publishYear);
@@ -39,7 +39,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`https://book-store-phi-two.vercel.app/api/books/${id}`, data)
+      .put(`https://book-store-api-theta.vercel.app/api/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Edited successfully", { variant: "success" });
