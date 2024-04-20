@@ -24,12 +24,11 @@ app.use(cors());
 
 // Middleware for parsing request body
 app.use(express.json());
+app.use(BookRoute);
 
 app.get("/", (req, res) => {
   res.json("Ini Adalah API Book");
 });
-
-app.use("/api", BookRoute);
 
 app.get("*", (req, res) => {
   res.sendStatus("404");
