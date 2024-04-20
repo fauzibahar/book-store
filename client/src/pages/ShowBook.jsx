@@ -13,8 +13,8 @@ const ShowBook = () => {
     setLoading(true);
     axios
       .get(`https://book-store-phi-two.vercel.app/api/books/${id}`)
-      .then((response) => {
-        setBook(response.data);
+      .then((res) => {
+        setBook(res.data);
         setLoading(false);
       })
       .catch((error) => {

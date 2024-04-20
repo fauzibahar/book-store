@@ -18,10 +18,10 @@ const EditBook = () => {
     setLoading(true);
     axios
       .get(`https://book-store-phi-two.vercel.app/api/books/${id}`)
-      .then((response) => {
-        setAuthor(response.data.author);
-        setPublishYear(response.data.publishYear);
-        setTitle(response.data.title);
+      .then((res) => {
+        setAuthor(res.data.author);
+        setPublishYear(res.data.publishYear);
+        setTitle(res.data.title);
         setLoading(false);
       })
       .catch((error) => {
