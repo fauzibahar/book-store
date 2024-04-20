@@ -1,4 +1,4 @@
-import { Book } from "../models/BookModel.js";
+import Book from "../models/BookModel.js";
 
 // Route for Save a new Book
 export const createBook = async (req, res) => {
