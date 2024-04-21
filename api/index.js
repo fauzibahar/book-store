@@ -18,6 +18,10 @@ app.get("/", (req, res) => {
   res.json("Welcome To Book Store API");
 });
 
+app.get("*", (req, res) => {
+  res.sendStatus("404");
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on Port: ${PORT}`);
 });
