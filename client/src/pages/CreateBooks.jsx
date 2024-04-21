@@ -21,7 +21,7 @@ const CreateBooks = () => {
     };
     setLoading(true);
     axios
-      .post("https://book-store-api-theta.vercel.app/api/books", data)
+      .post("https://book-store-api-peach.vercel.app/api/books", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Created successfully", { variant: "success" });

@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://book-store-api-theta.vercel.app/api/books")
+      .get("https://book-store-api-peach.vercel.app/api/books")
       .then((res) => {
         setBooks(res.data.data);
         setLoading(false);
